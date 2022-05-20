@@ -6,7 +6,13 @@
       </div>
       <div class="created-by">
         <p id="comment-subtitle">
-          Posted by <b>{{user.username}} </b> on <b>{{formatDate created_at}}</b>
+          Posted by
+          {{user.username}}
+          on
+          {{format_date created_at}}
+          |
+          {{comments.length}}
+          {{format_plural "comment" comments.length}}
         </p>
       </div>
     </div>
