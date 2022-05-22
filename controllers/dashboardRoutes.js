@@ -25,6 +25,10 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+router.get("/new", withAuth, (req, res) => {
+  res.render("add-post");
+});
+
 router.get("/update/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
